@@ -477,19 +477,20 @@ export default function AdmissionsPortal() {
                 >
                   <label className="text-[9px] sm:text-[10px] font-mono uppercase tracking-[0.3em] text-black font-medium pl-2 flex justify-between w-full mb-1">
                     <span>Program</span>
-                    <span className="opacity-40">(Optional)</span>
                   </label>
                   <div className="relative">
                     <select
+                      required
                       value={formData.course}
                       onChange={(e) => setFormData({ ...formData, course: e.target.value })}
                       onFocus={playHoverSound}
                       className="w-full bg-[#FAFAFA] rounded-xl px-4 py-3 sm:px-5 sm:py-4 text-sm sm:text-lg font-light text-black focus:outline-none focus:ring-4 focus:ring-black/5 transition-all duration-500 shadow-sm appearance-none cursor-pointer pr-10"
                     >
-                      <option value="">Select Program (Optional)</option>
+                      <option value="">Select Program</option>
                       <option value="Computer Vision">Computer Vision</option>
                       <option value="Backend Development">Backend Development</option>
                       <option value="Cybersecurity">Cybersecurity</option>
+                      <option value="Data and Intelligence Engineering">Data and Intelligence Engineering</option>
                     </select>
                     <ChevronDown className="absolute right-4 top-1/2 -translate-y-1/2 w-5 h-5 text-black/30 pointer-events-none transition-opacity duration-500" strokeWidth={1.5} />
                   </div>
